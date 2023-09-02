@@ -9,16 +9,19 @@ const Bookstore = ({ bookstore, books, countries, authors }) => {
   const country_id = bookstore.relationships.countries.data.id;
   const foundData = countries.find((item) => item.id === country_id);
 
-  // Calculate the scaling factor to fit the image within a 100px radius circle
-  const scalingFactor = 100 / Math.min(bookstore.attributes.storeImageWidth, bookstore.attributes.storeImageHeight);
+  // Calculate the scaling factor to fit the image within a 150px radius circle
+  const scalingFactor = 150 / Math.min(bookstore.attributes.storeImageWidth, bookstore.attributes.storeImageHeight);
 
   // Apply the scaling factor to the image URL
   const scaledImageSrc = `${bookstore.attributes.storeImage}?w=${Math.floor(bookstore.attributes.storeImageWidth * scalingFactor)}&h=${Math.floor(bookstore.attributes.storeImageHeight * scalingFactor)}`;
+
+  // Transform the date to the desired form
   const establishmentDate = new Date(bookstore.attributes.establishmentDate).toLocaleDateString();
+
 
   const [rating, setRating] = useState(bookstore.attributes.rating);
 
-    // Function to update the rating in the API
+    // Function to update the rating
   const updateRating = (newRating) => {
       // Update the rating state locally
       setRating(newRating);
@@ -26,7 +29,6 @@ const Bookstore = ({ bookstore, books, countries, authors }) => {
 
   return (
     <div className="bookstore">
-      {/* Bookstore image */}
       <div className='bookstore-frame'>
         <div className="image-frame">
             {/* Bookstore image */}

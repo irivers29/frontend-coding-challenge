@@ -12,16 +12,20 @@ const BookList = ({ bookstore, books, authors }) => {
           </tr>
         </thead>
         <tbody>
+          {/* Check if the data is correct */}
           {bookstore.relationships.books &&
           Array.isArray(bookstore.relationships.books.data) &&
           bookstore.relationships.books.data.length > 0 ? (
             bookstore.relationships.books.data.slice(0, 2).map((book) => {
+              // Find the book with the right id
               const foundBook = books.find((item) => item.id === book.id);
-              console.log('BFound Book: ', foundBook)
+
               if (foundBook) {
                 const author_id = foundBook.relationships.author.data.id
+
+                // Find the author with the right id
                 const foundAuthor = authors.find((item) => item.id === author_id)
-                console.log('Author Id: ', foundAuthor)
+
                 return (
                   <tr key={book.id}>
                     <td>{foundBook.attributes.name}</td>

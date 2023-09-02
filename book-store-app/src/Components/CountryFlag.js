@@ -5,6 +5,7 @@ const CountryFlag = ({ countryCode }) => {
   const [flagUrl, setFlagUrl] = useState('');
 
   useEffect(() => {
+    {/* Fetch the url of the flag */}
     const fetchFlag = async () => {
       try {
         const country_key = countryCode["attributes"]["code"]

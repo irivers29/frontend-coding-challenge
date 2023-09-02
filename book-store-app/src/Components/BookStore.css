@@ -53,9 +53,9 @@
   }
 
   .rating {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    position: absolute; /* Make it absolutely positioned relative to the parent */
+    top: 10px;  /* Adjust the top position as needed */
+    right: 10px; /* Adjust the right position as needed */
   }
   
   /* Style for the establishment date and website link */
@@ -67,9 +67,9 @@
   }
 
   .bookstore-name{
-    position: absolute;
-    top: 25px;
-    left: 200px;
+    position: absolute; /* Make it absolutely positioned relative to the parent */
+    top: 25px; /* Adjust the top position as needed */
+    left: 200px; /* Adjust the left position as needed */
     font-weight: bold; /* Make the font bold */
     font-size: 20px; /* Adjust the font size as needed */
   }
