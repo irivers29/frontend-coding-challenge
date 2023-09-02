@@ -1,0 +1,90 @@
+/* Updated Bookstore.css */
+
+/* Style for the rectangular bookstore frame */
+.bookstore-frame {
+    position: relative; /* Make it a relatively positioned container */
+    border: 2px solid rgb(85, 84, 84);
+    padding: 20px; /* Increase padding for a larger frame */
+    width: 600px; /* Set a fixed width in pixels */
+    border-radius: 10px; /* Create a circular frame */
+    height: 240px; /* Set a fixed height in pixels */
+    margin: 0 auto; /* Center the frame horizontally */
+  }
+  
+  /* Style for the left image frame */
+  .image-frame {
+    position: absolute; /* Make it absolutely positioned relative to the parent */
+    top: 30px; /* Adjust the top position as needed */
+    left: 10px; /* Adjust the left position as needed */
+    border-radius: 50%; /* Create a circular frame */
+    overflow: hidden; /* Hide overflow content outside the circle */
+    width: 150px; /* Set a fixed width for the image frame */
+    height: 150px; /* Set a fixed height for the image frame */
+  }
+  
+  /* Style for the bookstore image */
+  .image-frame img {
+    /* Make the image fill the circular frame */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire frame, cropping as needed */
+  }
+  
+  /* Additional styles for the entire bookstore component */
+  /* You can customize this as needed */
+  .book-list {
+    position: absolute; /* Make it absolutely positioned relative to the parent */
+    top: 80px; /* Adjust the top position as needed */
+    left: 200px; /* Adjust the left position as needed */
+    width: 60%; /* Adjust the width to fill the remaining space */
+    border-collapse: collapse;
+  }
+  
+  .book-list th,
+  .book-list td {
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .book-list th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+
+  .rating {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  /* Style for the establishment date and website link */
+  .establishment {
+    position: absolute; /* Make it absolutely positioned relative to the parent */
+    bottom: 0px; /* Adjust the bottom position as needed */
+    left: 10px; /* Adjust the left position as needed */
+    text-align: left; /* Align the text to the left */
+  }
+
+  .bookstore-name{
+    position: absolute;
+    top: 25px;
+    left: 200px;
+    font-weight: bold; /* Make the font bold */
+    font-size: 20px; /* Adjust the font size as needed */
+  }
+
+/* Style for the country flag */
+.country-flag {
+  position: absolute; /* Position absolutely within the parent */
+  bottom: 0px; /* Adjust the bottom position as needed */
+  right: 10px; /* Adjust the right position as needed */
+}
+
+.country-flag img {
+  /* Set your desired width and height for the image */
+  width: 40px; /* Set your desired width in pixels */
+  height: 30px; /* Set your desired height in pixels */
+  object-fit: cover; /* Maintain aspect ratio and cover the frame */
+  border-radius: 5px; /* Create a circular frame */
+}
