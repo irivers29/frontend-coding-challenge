@@ -88,3 +88,16 @@
   object-fit: cover; /* Maintain aspect ratio and cover the frame */
   border-radius: 5px; /* Create a circular frame */
 }
+
+/* StarRating.css */
+.star-rating {
+  font-size: 24px; /* Adjust the size of the stars */
+}
+
+.star {
+  cursor: pointer;
+}
+
+.star.filled {
+  color: gold; /* Color for filled stars */
+}
